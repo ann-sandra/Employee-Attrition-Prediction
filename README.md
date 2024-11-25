@@ -34,11 +34,15 @@ This project aims to predict employee attrition within an organization using mac
    - **Chi-Square Test** was performed to identify significant features.  
    - Insignificant features such as `EmployeeNumber`, `ApplicationID`, `Over18`, `StandardHours`, and `PerformanceRating` were dropped.  
 
-4. **Feature Engineering**:  
+4. **Categorical Encoding**:  
+   - Categorical variables (e.g., `BusinessTravel`, `Department`, `EducationField`) are encoded using **Label encoder**.  
+
+5. **Feature Engineering**:  
    - Highly correlated variables (e.g., `YearsAtCompany`, `YearsWithCurrManager`, `YearsSinceLastPromotion`) were merged using **PCA (Principal Component Analysis)**.  
 
-5. **Data Balancing**:  
-   - As the dataset was imbalanced (more retained employees than resigned), **SMOTE (Synthetic Minority Oversampling Technique)** was used to balance the data.  
+6. **Data Balancing**:  
+   - As the dataset was imbalanced (more retained employees than resigned), **SMOTE (Synthetic Minority Oversampling Technique)** was used to balance the data.
+     
 
 ---
 
