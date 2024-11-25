@@ -138,7 +138,7 @@ Random Forest was optimized using **GridSearchCV**.
 
 ---
 
-## **How to Run## **
+## **How to Run**
 
 ### **Setup**
 1. Install required libraries:  
