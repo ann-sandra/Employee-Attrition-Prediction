@@ -54,18 +54,21 @@ This project aims to predict employee attrition within an organization using mac
    - <img src="image/envsatisfaction.png" alt="Env satisfaction distribution" width="500"/>  
 2. **Work Tenure**:  
    - Majority of employees worked at the company for **less than 10 years**.
-  <img src="image/yearsatcompany.png" alt="Years at company" width="500"/>  
-  <img src="image/numcompaniesworked.png" alt="No of companies worked" width="500"/>  
+   - <img src="image/yearsatcompany.png" alt="Years at company" width="500"/>
+   - Majority of employees have worked in **only one company**.
+   - <img src="image/numcompaniesworked.png" alt="No of companies worked" width="500"/>  
 3. **Age Distribution**:  
    - Follows a normal distribution between **18 and 60 years**, with most employees around **30 years old**.  
 4. **Promotion History**:  
    - Most employees received their last promotion less than a year ago.
-  <img src="image/lastpromotion.png" alt="Years since last promotion" width="500"/>  
+   - <img src="image/lastpromotion.png" alt="Years since last promotion" width="500"/>  
 
 ### **Correlation Analysis**  
-- `YearsAtCompany`, `YearsInCurrentRole`, and `YearsSinceLastPromotion` showed significant correlations.  
-- After merging correlated features and removing insignificant ones, final features were selected for model building.  
-<img src="image/correlation.png" alt="heat map before PCA" width="500"/>  
+- `YearsAtCompany`, `YearsInCurrentRole`, and `YearsSinceLastPromotion` showed significant correlations.
+- The correlation heatmap:
+- <img src="image/correlation.png" alt="heat map before PCA" width="500"/>
+- Job level and total working years are highly correlated
+- After merging correlated features and removing insignificant ones, final features were selected for model building.
 
 ---
 
@@ -106,7 +109,8 @@ Random Forest was optimized using **GridSearchCV**.
 ### **Performance Results**  
 - **Training Accuracy**: 85%  
 - **Testing Accuracy**: 93%
-- 
+
+- **The ROC curve for the final model of Random Forest:**
 <img src="image/ROC.png" alt="ROC curve" width="500"/>  
 ---
 
@@ -115,18 +119,19 @@ Random Forest was optimized using **GridSearchCV**.
 1. **Feature Importance**:  
    - Key features influencing attrition were identified:  
      - `DailyRate`, `Age`, `MonthlyIncome`, `DistanceFromHome`, `TotalWorkingYears`, `TrainingTimesLastYear`.
-  <img src="image/featureimportance.png" alt="Feature importance" width="500"/>  
+     - <img src="image/featureimportance.png" alt="Feature importance" width="500"/>  
 2. **Learning Curve Analysis**:  
    - Training and testing accuracy vs. hyperparameters were plotted to avoid overfitting.
-     
-<img src="image/accuracyvsalpha.png" alt="Accuracy VS alpha" width="500"/>
-
-<img src="image/impurityvsalpha.png" alt="impurity VS alpha" width="500"/>  
+   - <img src="image/accuracyvsalpha.png" alt="Accuracy VS alpha" width="500"/>
+   - The gini impurity vs alpha values is plotted to choose the ideal alpha value
+   - <img src="image/impurityvsalpha.png" alt="impurity VS alpha" width="500"/>  
 
 3. **KNN Elbow Method**:  
-   - `K=1` was chosen for minimal bias and variance trade-off.  
-<img src="image/elbow.png" alt="KNN elbow method" width="500"/>
-<img src="image/knn.png" alt="KNN learning curve" width="500"/>  
+   - `K=1` was chosen for minimal bias and variance trade-off.
+   - <img src="image/elbow.png" alt="KNN elbow method" width="500"/>
+   - The accuracy decreases as K increases
+   - <img src="image/knn.png" alt="KNN learning curve" width="500"/>
+   - The accuracy in both training and test data decrease as the number of neighbors increases.
 
 ---
 
