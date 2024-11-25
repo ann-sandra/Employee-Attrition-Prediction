@@ -51,7 +51,7 @@ This project aims to predict employee attrition within an organization using mac
 ### **Key Insights**  
 1. **Satisfaction Levels**:  
    - Most employees rated their environment and job satisfaction as **3 (High)** or higher.
-  <img src="image/envsatisfaction.png" alt="Env satisfaction distribution" width="500"/>  
+   - <img src="image/envsatisfaction.png" alt="Env satisfaction distribution" width="500"/>  
 2. **Work Tenure**:  
    - Majority of employees worked at the company for **less than 10 years**.
   <img src="image/yearsatcompany.png" alt="Years at company" width="500"/>  
